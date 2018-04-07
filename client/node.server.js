@@ -13,7 +13,7 @@ var historyMiddleware = history({
 });
 app.use(historyMiddleware);
 
-// 监听8383端口，开启服务器
+// 监听5113端口，开启服务器
 app.listen(5113, function (err) {
     if (err) {
         console.log(err);
