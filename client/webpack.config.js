@@ -10,8 +10,8 @@ var conf = require('./conf.json');
 module.exports = {
     // 入口文件
     entry: {
-        app: path.resolve(__dirname, 'client/src/index.js'),
-        main: path.resolve(__dirname, 'client/public/styles/main.css.js'),
+        app: path.resolve(__dirname, 'src/index.js'),
+        main: path.resolve(__dirname, 'public/styles/main.css.js'),
         commons: conf.commons
     },
     // 输出配置
