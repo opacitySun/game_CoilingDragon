@@ -12,7 +12,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prod": "webpack --display-modules --display-chunks --config webpack.prod.config.js",
+    "prod": "webpack --display-modules --display-chunks --config client/webpack.prod.config.js",
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
