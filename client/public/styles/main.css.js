@@ -6,4 +6,4 @@
 // ============================
 // P2. Style Guideline
 // ============================
-// import {} from "./common.scss";
+import {} from "./common.scss";
