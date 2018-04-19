@@ -51,12 +51,12 @@ module.exports = {
             {
                 test: /\.scss$/,
                 loader: cssExtractor.extract('style-loader', 'css-loader?sourceMap!sass-loader?sourceMap'),
-                include: path.resolve(__dirname, 'client/public/styles')
+                include: path.resolve(__dirname, 'public/styles')
             },
             {
                 test: /\.css$/,
                 loader: cssExtractor.extract('style-loader', 'css-loader'),
-                include: path.resolve(__dirname, 'client/public/styles')
+                include: path.resolve(__dirname, 'public/styles')
             },
             {
                 test: /\.css$/,
@@ -65,7 +65,7 @@ module.exports = {
                     'extract-loader',
                     'css-loader'
                 ],
-                exclude: path.resolve(__dirname, 'client/public/styles')
+                exclude: path.resolve(__dirname, 'public/styles')
             }, 
             {
                 test: /\.css\.map$/,
