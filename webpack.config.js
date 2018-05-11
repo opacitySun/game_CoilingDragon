@@ -19,7 +19,8 @@ module.exports = {
         // 输出路径是 myProject/webapp
         path: path.resolve(__dirname, 'webapp'),
         filename: '[name].[hash].js',
-        chunkFilename: '[id].[chunkhash].js'
+        chunkFilename: '[id].[chunkhash].js',
+        publicPath: '/'
     },
     externals: {
         jquery: 'window.$'

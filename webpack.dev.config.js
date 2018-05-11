@@ -17,9 +17,9 @@ config.plugins.push(
 );
 config.devServer = {
     contentBase: config.output.path,
+    publicPath: config.output.publicPath,
     hot: true,
-    inline: true,
-    progress: true
+    inline: true
 };
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'/','webpack/hot/dev-server');
 var compiler = webpack(config);
