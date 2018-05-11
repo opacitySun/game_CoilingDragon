@@ -10,7 +10,7 @@ var conf = require('./conf.json');
 module.exports = {
     // 入口文件
     entry: {
-        app: './src/index.js',
+        app: ['./src/index.js'],
         main: './public/styles/main.css.js',
         commons: conf.commons
     },
