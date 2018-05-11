@@ -36,6 +36,12 @@ var server = new WebpackDevServer(compiler, {
     hot: true,
     inline: true,
     //关闭检测授权host
-    disableHostCheck: true
+    disableHostCheck: true,
+    proxy: {
+      'http://localhost:5112/sockjs-node/info': {
+        target: 'http://www.sunbowei.com:5112/sockjs-node/info',
+        secure: false
+      }
+    }
 });
 server.listen(5112,'www.sunbowei.com');
