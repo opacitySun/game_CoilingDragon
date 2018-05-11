@@ -20,7 +20,13 @@ config.devServer = {
     publicPath: config.output.publicPath,
     hot: true,
     inline: true,
-    disableHostCheck: true
+    disableHostCheck: true,
+    proxy: {
+      'http://localhost:5112/sockjs-node/info': {
+        target: 'http://www.sunbowei.com:5112/sockjs-node/info',
+        secure: false
+      }
+    }
 };
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'/','webpack/hot/dev-server');
 var compiler = webpack(config);
@@ -29,6 +35,7 @@ var server = new WebpackDevServer(compiler, {
     publicPath: config.output.publicPath,
     hot: true,
     inline: true,
+    //关闭检测授权host
     disableHostCheck: true
 });
 server.listen(5112,'www.sunbowei.com');
