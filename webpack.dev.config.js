@@ -25,7 +25,9 @@ config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'
 var compiler = webpack(config);
 var server = new WebpackDevServer(compiler, {
     contentBase: config.output.path,
-    hot: true
+    publicPath: config.output.publicPath,
+    hot: true,
+    inline: true
 });
 server.listen(5112, function (err) {
     if (err) {
