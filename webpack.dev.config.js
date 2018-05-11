@@ -19,7 +19,7 @@ config.devServer = {
     contentBase: config.output.path,
     publicPath: config.output.publicPath,
     hot: true,
-    //inline: true,
+    inline: true,
     disableHostCheck: true
 };
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'/','webpack/hot/dev-server');
@@ -28,7 +28,10 @@ var server = new WebpackDevServer(compiler, {
     contentBase: config.output.path,
     publicPath: config.output.publicPath,
     hot: true,
-    //inline: true,
-    disableHostCheck: true
+    inline: true,
+    disableHostCheck: true,
+    headers:{
+        'Access-Control-Allow-Origin': '*'
+    }
 });
 server.listen(5112);
