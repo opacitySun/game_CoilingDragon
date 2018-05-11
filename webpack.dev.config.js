@@ -29,9 +29,6 @@ var server = new WebpackDevServer(compiler, {
     publicPath: config.output.publicPath,
     hot: true,
     inline: true,
-    disableHostCheck: true,
-    headers:{
-        'Access-Control-Allow-Origin': '*'
-    }
+    disableHostCheck: true
 });
-server.listen(5112);
+server.listen(5112,'www.sunbowei.com');
