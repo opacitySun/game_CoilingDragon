@@ -22,8 +22,8 @@ config.devServer = {
     inline: true,
     disableHostCheck: true,
     proxy: {
-      'http://localhost:5112/sockjs-node/info': {
-        target: 'http://www.sunbowei.com:5112/sockjs-node/info',
+      'http://localhost:5112/*': {
+        target: 'http://www.sunbowei.com:5112',
         secure: false
       }
     }
@@ -38,8 +38,8 @@ var server = new WebpackDevServer(compiler, {
     //关闭检测授权host
     disableHostCheck: true,
     proxy: {
-      'http://localhost:5112/sockjs-node/info': {
-        target: 'http://www.sunbowei.com:5112/sockjs-node/info',
+      'http://localhost:5112/*': {
+        target: 'http://www.sunbowei.com:5112',
         secure: false
       }
     }
