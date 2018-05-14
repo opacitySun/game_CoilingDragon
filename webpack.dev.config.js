@@ -5,6 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 // 引入基本配置
 var config = require('./webpack.config');
 var devPort = 5112;
+var devDomain = 'www.sunbowei.com'
 
 config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
@@ -21,7 +22,7 @@ config.devServer = {
     hot: true,
     inline: true
 };
-config.entry.app.unshift('webpack-dev-server/client?http://www.sunbowei.com:'+devPort+'/','webpack/hot/dev-server');
+config.entry.app.unshift('webpack-dev-server/client?http://'+devDomain+':'+devPort+'/','webpack/hot/dev-server');
 var compiler = webpack(config);
 var server = new WebpackDevServer(compiler, {
     contentBase: config.output.path,
@@ -33,7 +34,7 @@ var server = new WebpackDevServer(compiler, {
     //关闭检测授权host
     disableHostCheck: true,
     proxy: {
-        "*": "http://www.sunbowei.com:5112"
+        '*': 'http://'+devDomain+':'+devPort
     }
 });
 server.listen(devPort);
