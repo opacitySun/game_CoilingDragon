@@ -29,9 +29,6 @@ var server = new WebpackDevServer(compiler, {
     hot: true,
     inline: true,
     //关闭检测授权host
-    disableHostCheck: true,
-    quiet: false,
-    noInfo: true,
-    stats: {colors: true}
+    disableHostCheck: true
 });
 server.listen(5112,'www.sunbowei.com');
