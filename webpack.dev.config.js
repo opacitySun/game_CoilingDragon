@@ -21,7 +21,7 @@ config.devServer = {
     hot: true,
     inline: true
 };
-config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'/','webpack/hot/dev-server');
+config.entry.app.unshift('webpack-dev-server/client?http://www.sunbowei.com:'+devPort+'/','webpack/hot/dev-server');
 var compiler = webpack(config);
 var server = new WebpackDevServer(compiler, {
     contentBase: config.output.path,
