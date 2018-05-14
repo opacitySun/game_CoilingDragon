@@ -7,7 +7,7 @@ var config = require('./webpack.config');
 var devPort = 5112;
 var devDomain = 'www.sunbowei.com'
 
-config.devtool = 'eval-source-map';
+config.devtool = 'eval-source-map'; //生成Source Maps,这里选择eval-source-map
 config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
