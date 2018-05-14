@@ -33,7 +33,7 @@ var server = new WebpackDevServer(compiler, {
     //关闭检测授权host
     disableHostCheck: true,
     proxy: {
-        "**": "http://www.sunbowei.com:5112"
+        "*": "http://www.sunbowei.com:5112"
     }
 });
-server.listen(5112,'123.57.50.14');
+server.listen(devPort);
