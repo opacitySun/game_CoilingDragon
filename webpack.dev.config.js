@@ -7,6 +7,7 @@ var config = require('./webpack.config');
 var devPort = 5112;
 var devDomain = 'www.sunbowei.com'
 
+config.devtool = 'eval-source-map';
 config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
@@ -33,6 +34,7 @@ var server = new WebpackDevServer(compiler, {
     // host: '123.57.50.14',
     //关闭检测授权host
     disableHostCheck: true,
+    historyApiFallback: true, //在开发单页应用时非常有用，它依赖于HTML5 history API，如果设置为true，所有的跳转将指向index.html
     proxy: {
         '*': 'http://'+devDomain+':'+devPort
     }
