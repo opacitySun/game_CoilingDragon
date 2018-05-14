@@ -31,6 +31,9 @@ var server = new WebpackDevServer(compiler, {
     // compress:true, //压缩
     // host: '123.57.50.14',
     //关闭检测授权host
-    disableHostCheck: true
+    disableHostCheck: true,
+    proxy: {
+        "**": "http://www.sunbowei.com:5112"
+    }
 });
-server.listen(5112);
+server.listen(5112,'123.57.50.14');

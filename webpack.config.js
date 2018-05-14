@@ -20,7 +20,7 @@ module.exports = {
         path: path.resolve(__dirname, 'webapp'),
         filename: '[name].[hash].js',
         chunkFilename: '[id].[chunkhash].js',
-        publicPath: 'http://www.sunbowei.com:5112/'
+        publicPath: '/'
     },
     externals: {
         jquery: 'window.$'
