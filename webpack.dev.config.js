@@ -19,14 +19,7 @@ config.devServer = {
     contentBase: config.output.path,
     publicPath: config.output.publicPath,
     hot: true,
-    inline: true,
-    disableHostCheck: true,
-    proxy: {
-      'http://localhost:5112/*': {
-        target: 'http://www.sunbowei.com:5112',
-        secure: false
-      }
-    }
+    inline: true
 };
 config.entry.app.unshift('webpack-dev-server/client?http://localhost:'+devPort+'/','webpack/hot/dev-server');
 var compiler = webpack(config);
@@ -37,11 +30,8 @@ var server = new WebpackDevServer(compiler, {
     inline: true,
     //关闭检测授权host
     disableHostCheck: true,
-    proxy: {
-      'http://localhost:5112/*': {
-        target: 'http://www.sunbowei.com:5112',
-        secure: false
-      }
-    }
+    quiet: false,
+    noInfo: true,
+    stats: {colors: true}
 });
 server.listen(5112,'www.sunbowei.com');
