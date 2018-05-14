@@ -29,7 +29,7 @@ var server = new WebpackDevServer(compiler, {
     hot: true,
     inline: true, //默认为true, 意思是，在打包时会注入一段代码到最后的js文件中，用来监视页面的改动而自动刷新页面,当为false时，网页自动刷新的模式是iframe，也就是将模板页放在一个frame中
     // compress:true, //压缩
-    host: '123.57.50.14',
+    // host: '123.57.50.14',
     //关闭检测授权host
     disableHostCheck: true
 });
