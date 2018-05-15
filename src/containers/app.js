@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from '/favicon.ico';
+import logo from '/public/favicon.ico';
 import './app.css';
 
 class App extends Component {
