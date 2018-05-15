@@ -54,9 +54,8 @@ module.exports = {
                 use: cssExtractor.extract({
                     fallback:"style-loader",
                     use: ['css-loader','sass-loader'],
-                    publicPath: "/styles"
-                },
-                include: path.resolve(__dirname, 'public/styles')
+                    publicPath: "/public/styles"
+                }
             },
             {
                 test: /\.css$/,
