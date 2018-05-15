@@ -5,14 +5,6 @@ import App from './containers/app';
 // import About from './About.jsx';
 // import Home from './Home.jsx';
 
-function Home(){
-	return <h2>Home Page</h2>
-}
-
-function About(){
-	return <h2>About Page</h2>
-}
-
 ReactDOM.render(
 	<BrowserRouter>
 		<div>
@@ -23,4 +15,3 @@ ReactDOM.render(
 	</BrowserRouter>,
 	document.getElementById('root')
 );
-// ReactDOM.render(<App />, document.getElementById('root'));
