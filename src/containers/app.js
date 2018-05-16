@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter,Link,Route} from 'react-router-dom';
+import {BrowserRouter as Router,Link,Route} from 'react-router-dom';
 import {favicon} from './imgurl';
 import Index from '../components/index';
 import Plan from '../components/plan.js';
