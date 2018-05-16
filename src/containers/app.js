@@ -5,7 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
-import store from './reducer/store';
+import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
 import Plan from '../components/plan';
