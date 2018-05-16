@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router,Link,Route} from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 import {favicon} from './imgurl';
 import Index from '../components/index';
-import Plan from '../components/plan.js';
-import Popup from '../components/popup.js';
-import TestRouter from '../components/testrouter.js';
-import Detail from '../components/detail.js';
+import Plan from '../components/plan';
+import Popup from '../components/popup';
+import TestRouter from '../components/testrouter';
+import Detail from '../components/detail';
 
 // 引入路由
 import createHistory from 'history/createBrowserHistory';
