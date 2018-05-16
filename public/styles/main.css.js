@@ -8,3 +8,4 @@
 // ============================
 import {} from "./common.scss";
 import {} from "./app.scss";
+import {} from "./comment.scss";
