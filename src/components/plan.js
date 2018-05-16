@@ -1,4 +1,3 @@
-src/component/plant.js
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import store from '../reducer/store';
