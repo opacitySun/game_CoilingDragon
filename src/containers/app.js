@@ -9,7 +9,7 @@ import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
 import Plan from '../components/plan';
-import Popup from '../components/popup';
+// import Popup from '../components/popup';
 import TestRouter from '../components/testrouter';
 import Detail from '../components/detail';
 
