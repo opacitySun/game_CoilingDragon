@@ -19,7 +19,6 @@ export default function items(state = initialItems, action) {
             return Object.assign({}, state, { show: action.show });
         case types.DELETE_ALL:
             return state.clear();
-        default:
-            return state;
     }
+    return state;
 }
