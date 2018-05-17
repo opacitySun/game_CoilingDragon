@@ -49,7 +49,7 @@ class App extends Component {
                 </div>
               </Router>
             </div>
-            <Popup/>
+            // <Popup/>
         </div>
       </Provider>
     );
