@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import store from '../reducer/store';
-import {showItem, addItem} from '../actions/actions';
+import store from '../reducer/store.js';
+import {showItem, addItem} from '../actions/actions.js';
 
 class Pupop extends Component{
   constructor (props) {
