@@ -12,7 +12,7 @@ export default function items(state = initialItems, action) {
         case types.ADD_ITEM:
             list.push(action.item);
             return Object.assign({}, state, { planlist: list });
-        case types.DELETE_ITEM: 
+        case types.DELETE_ITEM:
             let newstate = list.filter((item) => item.id != action.id);
             return Object.assign({}, state, { planlist: newstate });
         case types.SHOW_ITEM:
