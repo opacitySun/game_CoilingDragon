@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
@@ -66,7 +67,7 @@ class App extends Component {
 }
 
 App.childContextTypes = {
-  themeColor :React.PropTypes.string
+  themeColor :PropTypes.string
 };
 
 export default App;

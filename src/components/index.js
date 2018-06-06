@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 class Index extends Component {
     constructor(props) {
         super(props);
@@ -18,7 +19,7 @@ class Index extends Component {
 }
 
 Index.contextTypes = {
-    themeColor: React.PropTypes.string
+    themeColor: PropTypes.string
 };
 
 export default Index;
