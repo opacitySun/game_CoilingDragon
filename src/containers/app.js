@@ -65,4 +65,8 @@ class App extends Component {
   }
 }
 
+App.childContextTypes = {
+  themeColor :React.PropTypes.string
+};
+
 export default App;

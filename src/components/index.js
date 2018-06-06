@@ -3,6 +3,9 @@ class Index extends Component {
     constructor(props) {
         super(props);
     }
+    static contextTypes = {
+        themeColor: React.PropTypes.string
+    }
     render () {
         return (
             <div style={{background:this.context.themeColor}}>
@@ -16,4 +19,9 @@ class Index extends Component {
         );
     }
 }
+
+Index.contextTypes = {
+    themeColor: React.PropTypes.string
+};
+
 export default Index;

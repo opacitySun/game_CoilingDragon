@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class Index extends Component {
+class Index2 extends Component {
     constructor(props) {
         super(props);
     }
@@ -16,4 +16,9 @@ class Index extends Component {
         );
     }
 }
-export default Index;
+
+Index2.contextTypes = {
+	themeColor: React.PropTypes.string
+};
+
+export default Index2;
