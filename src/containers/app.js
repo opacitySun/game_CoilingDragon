@@ -8,18 +8,29 @@ import { Provider, connect } from 'react-redux';
 import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
-import Plan from '../components/plan';
-import Popup from '../components/popup';
-import TestRouter from '../components/testrouter';
-import Detail from '../components/detail';
+import Index2 from '../components/index2';
+// import Plan from '../components/plan';
+// import TestRouter from '../components/testrouter';
+// import Detail from '../components/detail';
 
 // 引入路由
 import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
 
 class App extends Component {
+  static childContextTypes = {
+    themeColor :React.PropTypes.string
+  }
   constructor(props) {
     super(props);
+    this.state = {
+      themeColor : 'red'
+    }
+  }
+  getChildContext () {
+    return {
+      themeColor : this.state.themeColor
+    }
   }
   render() {
     return (
@@ -36,20 +47,21 @@ class App extends Component {
                     /*编写导航*/
                     <ul className="nav">
                       <li><Link to="/">首页</Link></li>
-                      <li><Link to="/plan">计划表</Link></li>
-                      <li><Link to="/test">二级路由</Link></li>
+                      <Route path="/index2" component={Index2}/>
+                      /*<li><Link to="/plan">计划表</Link></li>
+                      <li><Link to="/test">二级路由</Link></li>*/
                     </ul>
                     /*路由匹配*/
                     <div className="content"> 
                       <Route exact path="/" component={Index}/>
-                      <Route path="/plan" component={Plan}/>
+                      <Route path="/index2" component={Index2}/>
+                      /*<Route path="/plan" component={Plan}/>
                       <Route path="/test" component={TestRouter}/>
-                      <Route path="/detail/:id" component={Detail}/>
+                      <Route path="/detail/:id" component={Detail}/>*/
                     </div>
                 </div>
               </Router>
             </div>
-            <Popup />
         </div>
       </Provider>
     );
