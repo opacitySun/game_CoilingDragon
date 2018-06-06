@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 class Index2 extends Component {
     constructor(props) {
         super(props);
-    }
-    getInitialState(){
-    	return {
-	      themeColor : 'blue'
-	    }
+        this.setState({themeColor: 'blue'});
     }
     render () {
         return (
