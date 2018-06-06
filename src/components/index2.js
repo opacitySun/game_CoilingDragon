@@ -4,6 +4,11 @@ class Index2 extends Component {
     constructor(props) {
         super(props);
     }
+    getInitialState(){
+    	return {
+	      themeColor : 'blue'
+	    }
+    }
     render () {
         return (
             <div style={{background:this.context.themeColor}}>

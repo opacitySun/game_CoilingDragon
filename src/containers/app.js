@@ -39,15 +39,15 @@ class App extends Component {
               <h2 className='App-title'>Welcome to React Plan</h2>
             </div>
             <div>
-              /*路由配置*/
+              {/*路由配置*/}
               <Router history = {history}>
                  <div className="contentBox">
-                    /*编写导航*/
+                    {/*编写导航*/}
                     <ul className="nav">
                       <li><Link to="/">首页</Link></li>
-                      <Route path="/index2" component={Index2}/>
+                      <li><Link to="/index2">首页2</Link></li>
                     </ul>
-                    /*路由匹配*/
+                    {/*路由匹配*/}
                     <div className="content"> 
                       <Route exact path="/" component={Index}/>
                       <Route path="/index2" component={Index2}/>
