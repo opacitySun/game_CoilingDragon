@@ -18,9 +18,6 @@ import createHistory from 'history/createBrowserHistory';
 const history = createHistory();
 
 class App extends Component {
-  static childContextTypes = {
-    themeColor :React.PropTypes.string
-  }
   constructor(props) {
     super(props);
     this.state = {
