@@ -21,25 +21,26 @@ const history = createHistory();
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    let _this = this;
+    _this.state = {
       themeColor : 'red'
-    }
+    };
+    _this.handleClick = function(event){
+      _this.setState({themeColor: 'blue'});
+    };
   }
   getChildContext () {
     return {
       themeColor : this.state.themeColor
     }
   }
-  handleClick (event) {
-    this.setState({themeColor: 'blue'});
-  },
   render() {
     return (
       <Provider store={store}>
         <div className="App">
             <div className="App-header">
               <img src={favicon} className="App-logo" alt="logo" />
-              <h2 className='App-title'>Welcome to React</h2>
+              <h2 className='App-title' onClick={this.handleClick}>Welcome to React</h2>
             </div>
             <div>
               {/*路由配置*/}
