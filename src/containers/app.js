@@ -46,16 +46,11 @@ class App extends Component {
                     <ul className="nav">
                       <li><Link to="/">首页</Link></li>
                       <Route path="/index2" component={Index2}/>
-                      /*<li><Link to="/plan">计划表</Link></li>
-                      <li><Link to="/test">二级路由</Link></li>*/
                     </ul>
                     /*路由匹配*/
                     <div className="content"> 
                       <Route exact path="/" component={Index}/>
                       <Route path="/index2" component={Index2}/>
-                      /*<Route path="/plan" component={Plan}/>
-                      <Route path="/test" component={TestRouter}/>
-                      <Route path="/detail/:id" component={Detail}/>*/
                     </div>
                 </div>
               </Router>
