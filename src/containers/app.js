@@ -30,13 +30,16 @@ class App extends Component {
       themeColor : this.state.themeColor
     }
   }
+  handleClick (event) {
+    this.setState({themeColor: 'blue'});
+  },
   render() {
     return (
       <Provider store={store}>
         <div className="App">
             <div className="App-header">
               <img src={favicon} className="App-logo" alt="logo" />
-              <h2 className='App-title'>Welcome to React Plan</h2>
+              <h2 className='App-title'>Welcome to React</h2>
             </div>
             <div>
               {/*路由配置*/}
