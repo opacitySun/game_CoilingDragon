@@ -3,9 +3,6 @@ class Index extends Component {
     constructor(props) {
         super(props);
     }
-    static contextTypes = {
-        themeColor: React.PropTypes.string
-    }
     render () {
         return (
             <div style={{background:this.context.themeColor}}>
