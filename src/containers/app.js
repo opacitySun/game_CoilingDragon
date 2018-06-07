@@ -35,7 +35,7 @@ class App extends Component {
   }
   render() {
     return (
-      <Provider {/*store={store}*/}>
+      <Provider>
         <div className="App">
             <div className="App-header">
               <img src={favicon} className="App-logo" alt="logo" />
