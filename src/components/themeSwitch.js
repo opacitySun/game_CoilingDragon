@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 class ThemeSwitch extends Component {
 	constructor () {
-    super()
-    this.state = { themeColor: '' }
+    super();
+    this.state = { themeColor: '' };
   }
   componentWillMount () {
     this._updateThemeColor()

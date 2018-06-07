@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ThemeSwitch from './themeSwitch';
 
 class Index2 extends Component {
     constructor(props) {
@@ -16,7 +15,6 @@ class Index2 extends Component {
                 <br/>
                 <br/>
             </div>
-            <ThemeSwitch />
         );
     }
 }

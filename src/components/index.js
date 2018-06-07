@@ -24,8 +24,8 @@ class Index extends Component {
                 <br/>
                 <br/>
                 <br/>
+                <ThemeSwitch />
             </div>
-            <ThemeSwitch />
         );
     }
 }
