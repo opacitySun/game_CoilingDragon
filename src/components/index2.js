@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import ThemeSwitch from './themeSwitch';
+
 class Index2 extends Component {
     constructor(props) {
         super(props);
@@ -14,12 +16,9 @@ class Index2 extends Component {
                 <br/>
                 <br/>
             </div>
+            <ThemeSwitch />
         );
     }
 }
-
-Index2.contextTypes = {
-	themeColor: PropTypes.string
-};
 
 export default Index2;

@@ -6,13 +6,14 @@ import {
 } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import store from '../reducer/store';
+// import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
 import Index2 from '../components/index2';
-// import Plan from '../components/plan';
-// import TestRouter from '../components/testrouter';
-// import Detail from '../components/detail';
+
+import createStore from '../store'
+import themeReducer from '../reducer'
+const store = createStore(themeReducer)
 
 // 引入路由
 import createHistory from 'history/createBrowserHistory';
@@ -30,13 +31,11 @@ class App extends Component {
     };
   }
   getChildContext () {
-    return {
-      themeColor : this.state.themeColor
-    }
+    return { store }
   }
   render() {
     return (
-      <Provider store={store}>
+      <Provider {/*store={store}*/}>
         <div className="App">
             <div className="App-header">
               <img src={favicon} className="App-logo" alt="logo" />
@@ -66,7 +65,7 @@ class App extends Component {
 }
 
 App.childContextTypes = {
-  themeColor :PropTypes.string
+  store: PropTypes.object
 };
 
 export default App;
