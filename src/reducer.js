@@ -4,11 +4,8 @@ const themeReducer = (state, action) => {
     }
     switch (action.type) {
       case 'CHANGE_COLOR':
-      	var stateArr = [];
-      	for(var i in state){
-      		stateArr.push(state[i]);
-      	}
-        return { ...stateArr, themeColor: action.themeColor }
+      	state.themeColor = action.themeColor;
+        return state;
       default:
         return state
     }
