@@ -24,15 +24,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     let _this = this;
-    _this.state = {
-      themeColor : 'red'
-    };
     _this.handleClick = function(event){
       _this.setState({themeColor: 'blue'});
     };
-  }
-  getChildContext () {
-    return { store }
   }
   render() {
     return (
@@ -64,9 +58,5 @@ class App extends Component {
     );
   }
 }
-
-App.childContextTypes = {
-  store: PropTypes.object
-};
 
 export default App;
