@@ -8,7 +8,7 @@ const themeReducer = (state, action) => {
       	for(var i in state){
       		stateArr.push(state[i]);
       	}
-        return { ...state, themeColor: action.themeColor }
+        return { ...stateArr, themeColor: action.themeColor }
       default:
         return state
     }
