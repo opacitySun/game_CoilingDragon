@@ -3,9 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
 class ThemeSwitch extends Component {
-	constructor () {
-    super();
-  }
   // dispatch action 去改变颜色
   handleSwitchColor (color) {
     if (this.props.onSwitchColor) {
