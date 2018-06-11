@@ -36,6 +36,6 @@ const mapDispatchToProps = (dispatch) => {
     }
   }
 }
-ThemeSwitch = connect(mapStateToProps, mapDispatchToProps)(ThemeSwitch)
+ThemeSwitch = connect(mapStateToProps)(ThemeSwitch)
 
 export default ThemeSwitch
