@@ -16,7 +16,7 @@ import themeReducer from '../reducer'
 const store = createStore(themeReducer)
 
 store.subscribe(() =>
-  store.getState()
+  console.log(store.getState())
 );
 
 // 引入路由
