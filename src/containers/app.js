@@ -6,18 +6,17 @@ import {
 } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// import store from '../reducer/store';
 import {favicon} from './imgurl';
 import Index from '../components/index';
 import Index2 from '../components/index2';
 
-import { createStore } from 'redux'
-import themeReducer from '../reducer'
-const store = createStore(themeReducer)
-
-store.subscribe(() =>
-  console.log(store.getState())
-);
+import store from '../reducer/store';
+// import { createStore } from 'redux'
+// import themeReducer from '../reducer'
+// const store = createStore(themeReducer)
+// store.subscribe(() =>
+//   console.log(store.getState())
+// );
 
 // 引入路由
 import createHistory from 'history/createBrowserHistory';

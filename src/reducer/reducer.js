@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import items from './items';
+import roleAction from './roleAction';
   
 const reducer = combineReducers({
-	items
+	roleAction
 });
   
 export default reducer;

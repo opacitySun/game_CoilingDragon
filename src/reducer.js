@@ -4,7 +4,7 @@ const themeReducer = (state, action) => {
     }
     switch (action.type) {
       case 'CHANGE_COLOR':
-      	// state.themeColor = action.themeColor;
+        //复制原state，创建新的state并返回
         var newState = JSON.parse( JSON.stringify( state ) );
         newState.themeColor = action.themeColor;
         return newState;
