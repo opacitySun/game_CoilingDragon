@@ -5,7 +5,9 @@ const themeReducer = (state, action) => {
     switch (action.type) {
       case 'CHANGE_COLOR':
       	// state.themeColor = action.themeColor;
-        return state.concat(action.themeColor);
+        var newState = JSON.parse( JSON.stringify( state ) );
+        newState.themeColor = action.themeColor;
+        return newState;
       default:
         return state
     }
