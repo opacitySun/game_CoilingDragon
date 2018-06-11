@@ -11,10 +11,13 @@ import {favicon} from './imgurl';
 import Index from '../components/index';
 import Index2 from '../components/index2';
 
-// import createStore from '../store'
 import { createStore } from 'redux'
 import themeReducer from '../reducer'
 const store = createStore(themeReducer)
+
+store.subscribe(() =>
+  store.getState()
+);
 
 // 引入路由
 import createHistory from 'history/createBrowserHistory';
