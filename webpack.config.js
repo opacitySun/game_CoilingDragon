@@ -22,9 +22,9 @@ module.exports = {
         chunkFilename: '[id].[chunkhash].js',
         publicPath: '/'
     },
-    externals: {
-        jquery: 'jQuery'
-    },
+    // externals: {
+    //     jquery: 'jQuery'
+    // },
     plugins: [
         cssExtractor
     ],
