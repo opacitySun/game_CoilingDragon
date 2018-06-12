@@ -26,7 +26,7 @@ ThemeSwitch.contextTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    themeColor: state.themeColor
+    themeColor: state.themeReducer.themeColor
   }
 }
 const mapDispatchToProps = (dispatch) => {
