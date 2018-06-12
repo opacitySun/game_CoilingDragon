@@ -25,7 +25,7 @@ class App extends Component {
              <div>
                 {/*编写导航*/}
                 <Route exact path="/" component={CreateRole}/>
-                <Route path="*" component={NotFoundPage}/>
+                <Route component={NotFoundPage}/>
             </div>
           </Router>
         </div>

@@ -89,6 +89,7 @@ module.exports = {
                     'file-loader?name=fonts/[name].[ext]'
                 ]
             },
+            //加载jquery
             {
                test: require.resolve('jquery'),
                use: [{
