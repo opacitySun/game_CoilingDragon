@@ -22,7 +22,7 @@ class App extends Component {
               {/*编写导航*/}
               <Switch>
                 <Route exact path="/" component={CreateRole}/>
-                <Route component={NotFoundPage}/>
+                <Route path="*" component={NotFoundPage}/>
               </Switch>
             </div>
           </Router>
