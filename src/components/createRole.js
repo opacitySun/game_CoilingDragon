@@ -35,7 +35,7 @@ CreateRole = connect(mapStateToProps)(CreateRole);
 
 window.onload = function(){
   $("#root").show();
-  $("#startLoadPageImg").hide();
+  $("#startLoadPage").hide();
 }
 
 export default CreateRole;

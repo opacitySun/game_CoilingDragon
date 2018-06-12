@@ -6,8 +6,8 @@ import {
 } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import NotFoundPage from '../components/notFoundPage';
 import CreateRole from '../components/createRole';
+import NotFoundPage from '../components/notFoundPage';
 
 import store from '../reducer/store';
 
@@ -24,7 +24,7 @@ class App extends Component {
           <Router history = {history}>
              <div>
                 {/*编写导航*/}
-                <Route path="/" component={CreateRole}/>
+                <Route exact path="/" component={CreateRole}/>
                 <Route path="*" component={NotFoundPage}/>
             </div>
           </Router>
