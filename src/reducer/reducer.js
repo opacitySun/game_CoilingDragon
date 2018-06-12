@@ -7,4 +7,4 @@ const reducer = combineReducers({
 	themeReducer
 });
   
-export default themeReducer;
+export default reducer;
