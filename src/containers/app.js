@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import {
-  Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import {Router,Route,Link,Switch} from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import CreateRole from '../components/createRole';
@@ -22,10 +18,12 @@ class App extends Component {
         <div>
           {/*路由配置*/}
           <Router history = {history}>
-             <div>
-                {/*编写导航*/}
+            <div>
+              {/*编写导航*/}
+              <Switch>
                 <Route exact path="/" component={CreateRole}/>
                 <Route component={NotFoundPage}/>
+              </Switch>
             </div>
           </Router>
         </div>
