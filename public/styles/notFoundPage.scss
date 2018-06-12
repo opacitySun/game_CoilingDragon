@@ -1,0 +1,25 @@
+.notFoundPage{
+	width:60%;
+	height:50%;
+	margin:25% 20%;
+	.notFoundPageLeft{
+		float:left;
+		height:100%;
+		width:50%;
+		img{
+			height:auto;
+			width:100%;
+		}
+	}
+	.notFoundPageRight{
+		float:right;
+		height:100%;
+		width:50%;
+		p{
+			width:100%;
+			text-align:center;
+			font-size:22px;
+			color:black;
+		}
+	}
+}
