@@ -23,7 +23,7 @@ module.exports = {
         publicPath: '/'
     },
     externals: {
-        jquery: 'window.$'
+        jquery: 'jQuery'
     },
     plugins: [
         cssExtractor
@@ -88,6 +88,16 @@ module.exports = {
                     'url-loader?mimetype=image/svg+xml',
                     'file-loader?name=fonts/[name].[ext]'
                 ]
+            },
+            {
+               test: require.resolve('jquery'),
+               use: [{
+                  loader: 'expose-loader',
+                  options: 'jQuery'
+               },{
+                  loader: 'expose-loader',
+                  options: '$'
+               }]
             }
         ]
     }
