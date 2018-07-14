@@ -9,8 +9,45 @@ class CreateRole extends Component {
   }
   render () {
     return (
-      <div style={{background:this.props.sex}}>
-        <div className="">创建角色</div>
+      <div className="createRole">
+        <div className="left">
+          <h2>创建角色</h2>
+          <div className="roleImg">
+            <div className="roleCanvas"></div>
+          </div>
+          <div className="createRoleBtn">
+            <button>确定</button>
+            <button>重置</button>
+          </div>
+        </div>
+        <div className="right">
+          <section>
+            <label>姓名：</label>
+            <input type="text" />
+          </section>
+          <section>
+            <label>性别：</label>
+            <div className="sexRadio">
+              <input type="radio" name="sex" value="0" checked="checked" />
+              <span>男</span>
+            </div>
+            <div className="sexRadio">
+              <input type="radio" name="sex" value="1" />
+              <span>女</span>
+            </div>
+            <div className="sexRadio">
+              <input type="radio" name="sex" value="2" />
+              <span>未知</span>
+            </div>
+          </section>
+          <section>
+            <label>属性：</label>
+            <div className="propGroup">
+              <div className="propName">力量</div>
+              <div className="propVal"></div>
+            </div>
+          </section>
+        </div>
       </div>
     );
   }
